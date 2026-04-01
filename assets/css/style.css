@@ -254,7 +254,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero p.hero-typed-line {
   margin-bottom: 1.25rem;
-  font-size: 26px;
+  /* Scales down on narrow viewports so long typed strings don’t overflow */
+  font-size: clamp(0.8125rem, 1.65vw + 0.6rem, 1.625rem);
+  line-height: 1.4;
 }
 
 #hero .hero-tagline {
@@ -302,6 +304,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
+  }
+
+  #hero p.hero-typed-line span {
+    letter-spacing: 0.5px;
   }
 }
 
