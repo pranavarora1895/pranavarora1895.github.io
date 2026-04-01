@@ -1220,6 +1220,45 @@ section {
   margin-bottom: 0;
 }
 
+/* Grid + explicit gap: reliable space between parent cards (Bootstrap row/cols can read flush) */
+.expertise-skills-band .skills-tags-grid.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
+.expertise-skills-band .skills-tags-grid.row > [class*="col-"] {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0;
+  flex: initial;
+}
+
+/* col-* and .skill-group share the same node — restore card padding after reset above */
+.expertise-skills-band .skills-tags-grid.row > [class*="col-"].skill-group {
+  padding: 1.5rem 1.55rem 1.6rem;
+}
+
+@media (min-width: 768px) {
+  .expertise-skills-band .skills-tags-grid.row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem 2.25rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .expertise-skills-band .skills-tags-grid.row {
+    gap: 2.25rem 2.75rem;
+  }
+}
+
 .expertise-skills-band .wakatime-inline {
   display: inline-flex;
   flex-wrap: wrap;
@@ -1250,8 +1289,8 @@ section {
 .skills-tags-grid .skill-group {
   margin-bottom: 0;
   background: #fff;
-  border-radius: 10px;
-  padding: 1.35rem 1.35rem 1.45rem;
+  border-radius: 12px;
+  padding: 1.5rem 1.55rem 1.6rem;
   border: 1px solid rgba(20, 157, 221, 0.12);
   box-shadow: 0 2px 14px rgba(23, 59, 108, 0.05);
   height: 100%;
