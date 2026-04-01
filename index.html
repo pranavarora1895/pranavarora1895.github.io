@@ -96,6 +96,9 @@
             <a href="#expertise" class="nav-link scrollto"><i class="bx bx-layer"></i> <span>Expertise</span></a>
           </li>
           <li>
+            <a href="#beyond-code" class="nav-link scrollto"><i class="bx bx-shape-square"></i> <span>Beyond code</span></a>
+          </li>
+          <li>
             <a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Experience</span></a>
           </li>
           <li>
@@ -123,7 +126,7 @@
       </p>
       <p class="hero-typed-line">
         <span class="typed"
-          data-typed-items="MESO &amp; energy systems software, Cloud-native architecture &amp; AWS collaboration, Terraform &amp; IaC deployment strategy, Software &amp; system design for IP, Funding &amp; partner ecosystems"></span>
+          data-typed-items="MESO &amp; energy software, Cloud-native &amp; AWS, Terraform &amp; IaC, Software &amp; IP systems, Funding &amp; partners"></span>
       </p>
       <p class="hero-lead text-start mx-auto">
         I build software that turns engineering and energy data into practical decision tools — software, cloud,
@@ -325,6 +328,8 @@
                 <li>Simulation in the product: workflows and APIs that make complex models usable for real users</li>
                 <li>GIS and site intelligence: land suitability, constraints, and map-based workflows tied to planning</li>
                 <li>Reporting and scenarios: technical direction for comparison, outputs, and interpretable results</li>
+                <li>Designed and proposed a cost modeling and pricing framework for simulation workloads, enabling better
+                  cost visibility, optimization, and future monetization strategies</li>
                 <li>Delivery hygiene: branching, QA, releases, and documentation so the team can ship with confidence</li>
               </ul>
             </article>
@@ -381,12 +386,35 @@
         <div class="section-title">
           <h2>Impact &amp; work</h2>
           <p>
-            Highlights from recent product and platform work—cloud modernization, GIS, simulation, reporting, IP,
-            partner programs, and delivery discipline—grounded in real engineering on energy systems software.
+            Highlights from recent product and platform work—cloud modernization, GIS, simulation, reporting, cost and
+            platform economics, IP, partner programs, and delivery discipline—grounded in real engineering on energy
+            systems software.
           </p>
         </div>
         <div class="row">
-          <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-up">
+          <div class="col-lg-12 mb-4" data-aos="fade-up">
+            <div class="icon-box impact-item--high">
+              <div class="icon"><i class="bx bx-line-chart"></i></div>
+              <h4 class="title"><span class="badge bg-primary me-2 align-middle">High impact</span>Cost Model &amp;
+                Pricing Framework</h4>
+              <div class="description">
+                <p class="mb-2">Designed a structured cost modeling approach for MESO to better understand, track, and
+                  scale the economics of simulation workloads in a cloud-native environment.</p>
+                <p class="mb-2"><strong>This involved:</strong></p>
+                <ul class="impact-detail-list mb-2">
+                  <li>Mapping AWS resource usage (compute, storage, API, data transfer) to simulation-level cost
+                    attribution</li>
+                  <li>Designing a tagging strategy to break down costs by model type, environment, and workload</li>
+                  <li>Proposing a per-simulation cost calculation framework using runtime metrics and cloud cost data</li>
+                  <li>Developing a credit-based pricing model to support future commercialization of the platform</li>
+                  <li>Creating a structured approach for benchmarking, anomaly detection, and cost validation</li>
+                </ul>
+                <p class="mb-0">This work bridges the gap between engineering and business by enabling transparent,
+                  scalable, and monetizable platform usage.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="50">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-cloud"></i></div>
               <h4 class="title">Cloud and platform modernization</h4>
@@ -464,8 +492,8 @@
         <div class="section-title">
           <h3 class="h2">Portfolio themes</h3>
           <p class="mb-2">
-            Public repositories and project notes grouped by theme—energy, GIS, cloud, reporting, and IP-related
-            collaboration.
+            Public repositories and project notes grouped by theme—energy, GIS, cloud, reporting, cost and pricing
+            systems, and IP-related collaboration.
           </p>
           <a class="btn btn-dark mt-2" href="https://github.com/pranavarora1895" role="button" target="_blank"
             rel="noopener"><i class="bx bxl-github"></i> GitHub</a>
@@ -498,6 +526,14 @@
               <p>Outputs, comparisons, and communication of model results—themes tied to reporting UX and analytics.</p>
             </div>
           </div>
+          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="330">
+            <div class="featured-card">
+              <h4>Cost Modeling &amp; Pricing System (MESO)</h4>
+              <p>Designed a cost modeling framework to estimate and track the cost of individual simulations in a
+                cloud-based architecture. Introduced a credit-based pricing concept and structured cost attribution using
+                AWS metrics, enabling future commercialization and scalable pricing strategies.</p>
+            </div>
+          </div>
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="350">
             <div class="featured-card">
               <h4>IP, funding &amp; partner alignment</h4>
@@ -525,8 +561,8 @@
         <div class="section-title">
           <h2>Expertise</h2>
           <p>
-            Where I go deepest: full-stack engineering, cloud delivery, geospatial products, product leadership, and
-            IP/partner alignment—supported by the technologies listed next.
+            Where I go deepest: full-stack engineering, cloud delivery, geospatial products, platform economics, product
+            leadership, and IP/partner alignment—supported by the technologies listed next.
           </p>
         </div>
         <div class="expertise-grid">
@@ -591,6 +627,20 @@
               <li>Funding-oriented narratives, scoping, and milestone thinking</li>
               <li>AWS and partner program alignment (architecture, modernization, ecosystem)</li>
               <li>Regional collaboration for delivery and programs</li>
+            </ul>
+          </article>
+          <article class="expertise-card" data-aos="fade-up" data-aos-delay="240">
+            <header class="expertise-card__head">
+              <span class="expertise-card__icon" aria-hidden="true"><i class="bx bx-dollar-circle"></i></span>
+              <h3 class="expertise-card__title">Cost modeling &amp; platform economics</h3>
+            </header>
+            <ul class="expertise-card__list">
+              <li>Cloud cost analysis and optimization (AWS)</li>
+              <li>Simulation-level cost attribution</li>
+              <li>Tagging strategies for cost breakdown</li>
+              <li>Credit-based pricing model design</li>
+              <li>Cost benchmarking and anomaly detection</li>
+              <li>Aligning engineering systems with business models</li>
             </ul>
           </article>
         </div>
@@ -693,6 +743,35 @@
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Engineering beyond code ======= -->
+    <section id="beyond-code" class="about section-bg what-section beyond-code-section">
+      <div class="container">
+        <div class="section-title beyond-code-section__title">
+          <h2 class="beyond-code-section__heading">Engineering beyond&nbsp;code</h2>
+          <p class="mb-0 beyond-code-section__intro">
+            Beyond implementation: connecting engineering with product strategy, commercialization, and decision-ready
+            technical design—including cost modeling and platform economics where the product meets the business model.
+          </p>
+        </div>
+        <div class="beyond-code-panel" data-aos="fade-up">
+          <header class="expertise-card__head beyond-code-panel__head">
+            <span class="expertise-card__icon" aria-hidden="true"><i class="bx bx-extension"></i></span>
+            <h3 class="expertise-card__title beyond-code-panel__title">Where engineering meets product &amp; business</h3>
+          </header>
+          <p class="beyond-code-panel__lead">
+            In addition to software development, I work on areas that connect engineering with product and business
+            impact:
+          </p>
+          <ul class="beyond-code-grid" role="list">
+            <li>Designing cost models and pricing strategies for cloud platforms</li>
+            <li>Structuring systems for scalability, maintainability, and commercialization</li>
+            <li>Translating technical workflows into product-ready features</li>
+            <li>Supporting decision-making through clear technical and system design</li>
+          </ul>
         </div>
       </div>
     </section>
