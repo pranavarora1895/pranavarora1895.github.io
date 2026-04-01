@@ -157,10 +157,6 @@ h1, h2, h3, h4, h5, h6 {
   #main {
     margin-left: 0;
   }
-  #hero {
-    margin-left: 0;
-    width: 100%;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -241,9 +237,9 @@ h1, h2, h3, h4, h5, h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-  /* Match #main offset so hero content centers in the column beside the fixed sidebar */
-  margin-left: 300px;
-  width: auto;
+  /* Full width on mobile; sidebar offset is applied only at min-width: 1200px (see below) */
+  margin-left: 0;
+  width: 100%;
   position: relative;
   min-height: 100vh;
   height: auto;
@@ -251,6 +247,13 @@ h1, h2, h3, h4, h5, h6 {
   background: url("../img/pranav_bg.JPG") top center;
   background-size: cover;
   box-sizing: border-box;
+}
+
+@media (min-width: 1200px) {
+  #hero {
+    margin-left: 300px;
+    width: auto;
+  }
 }
 
 #hero:before {
@@ -267,7 +270,12 @@ h1, h2, h3, h4, h5, h6 {
 #hero .hero-container {
   position: relative;
   z-index: 2;
-  min-width: 300px;
+  width: 100%;
+  max-width: 52rem;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 #hero h1 {
@@ -288,27 +296,40 @@ h1, h2, h3, h4, h5, h6 {
   /* Scales down on narrow viewports so long typed strings don’t overflow */
   font-size: clamp(0.8125rem, 1.65vw + 0.6rem, 1.625rem);
   line-height: 1.4;
+  overflow-wrap: anywhere;
+  max-width: 100%;
 }
 
 #hero .hero-tagline {
-  font-size: 1.05rem;
+  font-size: clamp(0.875rem, 2.2vw + 0.65rem, 1.05rem);
   font-weight: 600;
   letter-spacing: 0.02em;
   margin-bottom: 1rem;
-  max-width: 52rem;
+  max-width: 100%;
   line-height: 1.45;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 
 #hero .hero-lead {
-  font-size: 1rem;
+  font-size: clamp(0.9375rem, 0.5vw + 0.875rem, 1rem);
   font-weight: 400;
   max-width: 46rem;
   margin-bottom: 1.5rem;
   line-height: 1.65;
+  overflow-wrap: break-word;
+}
+
+#hero .hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem 0.35rem;
 }
 
 #hero .hero-cta .btn {
-  margin: 0.35rem 0.35rem 0.35rem 0;
+  margin: 0;
 }
 
 #hero .hero-cta .btn-outline-light:hover {
@@ -331,6 +352,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+  #hero {
+    padding: 88px max(16px, env(safe-area-inset-right, 0px)) 56px max(16px, env(safe-area-inset-left, 0px));
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
@@ -339,6 +366,24 @@ h1, h2, h3, h4, h5, h6 {
 
   #hero p.hero-typed-line span {
     letter-spacing: 0.5px;
+  }
+
+  #hero .hero-lead {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+  }
+
+  #hero .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  #hero .hero-cta .btn {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
