@@ -154,7 +154,7 @@
 
   <main id="main">
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <section id="about" class="about about-section">
       <div class="container">
         <div class="section-title">
           <h2>About</h2>
@@ -166,78 +166,85 @@
           </p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/Pranav_Green.jpg" class="img-fluid" alt="Pranav Arora" />
+        <div class="about-grid">
+          <div class="about-card about-card--photo" data-aos="fade-up">
+            <div class="about-card__photo-wrap">
+              <img src="assets/img/Pranav_Green.jpg" class="img-fluid" alt="Pranav Arora" />
+            </div>
           </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Senior Software Developer</h3>
-            <p class="fst-italic mb-3">
+          <article class="about-card about-card--intro" data-aos="fade-up" data-aos-delay="80">
+            <header class="expertise-card__head">
+              <span class="expertise-card__icon" aria-hidden="true"><i class="bx bx-user"></i></span>
+              <h3 class="expertise-card__title">Senior Software Developer</h3>
+            </header>
+            <p class="about-lead fst-italic mb-3">
               I’m Pranav Arora, a Senior Software Developer focused on building scalable, data-driven, and technically
               meaningful software systems.
             </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <strong>Location:</strong> <span>St. John’s, NL, Canada</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <strong>Site:</strong>
-                    <span>pranavarora1895.github.io</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <strong>Education:</strong> <span>MS Computer Science, Memorial University of Newfoundland</span>
-                  </li>
-                </ul>
+            <div class="about-facts">
+              <div class="about-fact">
+                <span class="about-fact__label">Location</span>
+                <span class="about-fact__value">St. John’s, NL, Canada</span>
               </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <strong>Role:</strong>
-                    <span>Senior Software Developer, Angler Solutions</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <strong>Email:</strong>
-                    <span>aurorapranav187@gmail.com</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-chevron-right"></i> <strong>Focus:</strong>
-                    <span>MESO, energy software, cloud &amp; GIS, IP, funding &amp; partners</span>
-                  </li>
-                </ul>
+              <div class="about-fact">
+                <span class="about-fact__label">Site</span>
+                <span class="about-fact__value">pranavarora1895.github.io</span>
+              </div>
+              <div class="about-fact">
+                <span class="about-fact__label">Education</span>
+                <span class="about-fact__value">MS Computer Science, Memorial University of Newfoundland</span>
+              </div>
+              <div class="about-fact">
+                <span class="about-fact__label">Role</span>
+                <span class="about-fact__value">Senior Software Developer, Angler Solutions</span>
+              </div>
+              <div class="about-fact">
+                <span class="about-fact__label">Email</span>
+                <span class="about-fact__value">aurorapranav187@gmail.com</span>
+              </div>
+              <div class="about-fact">
+                <span class="about-fact__label">Focus</span>
+                <span class="about-fact__value">MESO, energy software, cloud &amp; GIS, IP, funding &amp; partners</span>
               </div>
             </div>
-            <p>
-              I am a software engineer with a strong foundation in full-stack development, cloud systems, and applied
-              problem solving. Over the years, my work has evolved from general web and application development into
-              building more advanced technical platforms that combine software engineering with energy systems,
-              geospatial workflows, cloud infrastructure, and decision-support tools.
-            </p>
-            <p>
-              Currently, I work as a Senior Software Developer at Angler Solutions, where I contribute to MESO (Model for
-              Energy Systems Optimization) — a platform designed to support energy stakeholders in planning, evaluating,
-              and optimizing hybrid energy systems. My work involves both product engineering and architecture,
-              including backend services, frontend platform capabilities, GIS integrations, AWS deployments (including
-              Terraform-based infrastructure and deployment strategy), serverless
-              systems, simulation workflows,               technical planning, and collaboration across software, modelling, and
-              leadership teams. Beyond implementation, I contribute to <strong>software and system design</strong> work
-              that supports <strong>patenting</strong> and technical disclosure, help shape narratives and artifacts for
-              <strong>funding</strong> and programs, and collaborate with <strong>AWS</strong>, the <strong>AWS partner
-              network</strong>, and <strong>local partners</strong> so platform decisions stay aligned with cloud programs
-              and regional opportunities.
-            </p>
-            <p>
-              What excites me most is solving meaningful technical problems that connect software with real-world impact.
-              I enjoy working on systems that are not only functional, but also scalable, well-structured, and clear
-              enough to support decision-makers, technical users, and future product growth.
-            </p>
-            <h4 class="subsection-title mt-4">Professional summary</h4>
+          </article>
+          <article class="about-card about-card--wide about-card--prose" data-aos="fade-up" data-aos-delay="120">
+            <header class="expertise-card__head">
+              <span class="expertise-card__icon" aria-hidden="true"><i class="bx bx-book-open"></i></span>
+              <h3 class="expertise-card__title">Background</h3>
+            </header>
+            <div class="about-card__body">
+              <p>
+                I am a software engineer with a strong foundation in full-stack development, cloud systems, and applied
+                problem solving. Over the years, my work has evolved from general web and application development into
+                building more advanced technical platforms that combine software engineering with energy systems,
+                geospatial workflows, cloud infrastructure, and decision-support tools.
+              </p>
+              <p>
+                Currently, I work as a Senior Software Developer at Angler Solutions, where I contribute to MESO (Model for
+                Energy Systems Optimization) — a platform designed to support energy stakeholders in planning, evaluating,
+                and optimizing hybrid energy systems. My work involves both product engineering and architecture,
+                including backend services, frontend platform capabilities, GIS integrations, AWS deployments (including
+                Terraform-based infrastructure and deployment strategy), serverless systems, simulation workflows,
+                technical planning, and collaboration across software, modelling, and leadership teams. Beyond
+                implementation, I contribute to <strong>software and system design</strong> work that supports
+                <strong>patenting</strong> and technical disclosure, help shape narratives and artifacts for
+                <strong>funding</strong> and programs, and collaborate with <strong>AWS</strong>, the <strong>AWS partner
+                network</strong>, and <strong>local partners</strong> so platform decisions stay aligned with cloud programs
+                and regional opportunities.
+              </p>
+              <p>
+                What excites me most is solving meaningful technical problems that connect software with real-world impact.
+                I enjoy working on systems that are not only functional, but also scalable, well-structured, and clear
+                enough to support decision-makers, technical users, and future product growth.
+              </p>
+            </div>
+          </article>
+          <article class="about-card about-card--wide about-card--prose" data-aos="fade-up" data-aos-delay="160">
+            <header class="expertise-card__head">
+              <span class="expertise-card__icon" aria-hidden="true"><i class="bx bx-detail"></i></span>
+              <h3 class="expertise-card__title">Professional summary</h3>
+            </header>
             <p class="mb-0">
               Senior Software Developer with experience building cloud-based software platforms, full-stack applications,
               and technically complex products. Currently focused on energy software, simulation workflows, GIS-enabled
@@ -246,14 +253,14 @@
               involvement in IP-oriented system design, funding collaboration, and AWS and local partner engagement. I am
               interested in building scalable products that connect engineering depth with real-world usability.
             </p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
     <!-- End About Section -->
 
     <!-- ======= What I Do ======= -->
-    <section id="what-i-do" class="about section-bg">
+    <section id="what-i-do" class="about section-bg what-section">
       <div class="container">
         <div class="section-title">
           <h2>What I Do</h2>
@@ -262,10 +269,14 @@
             together.
           </p>
         </div>
-        <div class="row">
-          <div class="col-lg-10 mx-auto" data-aos="fade-up">
-            <p class="mb-3">My current work includes:</p>
-            <ul class="mb-4">
+        <div class="wi-grid">
+          <article class="wi-card" data-aos="fade-up">
+            <header class="expertise-card__head">
+              <span class="expertise-card__icon" aria-hidden="true"><i class="bx bx-bulb"></i></span>
+              <h3 class="expertise-card__title">Primary focus</h3>
+            </header>
+            <p class="mb-3 about-lead">My current work includes:</p>
+            <ul class="expertise-card__list">
               <li>Building cloud-native software for energy modelling and simulation</li>
               <li>Designing backend workflows and APIs for complex computational systems</li>
               <li>Developing GIS-enabled product features for spatial analysis and site intelligence</li>
@@ -277,11 +288,17 @@
               <li>Improving software scalability, maintainability, and release discipline</li>
               <li>Translating complex technical workflows into structured, usable product capabilities</li>
             </ul>
-            <p class="mb-0">
+          </article>
+          <article class="wi-card" data-aos="fade-up" data-aos-delay="100">
+            <header class="expertise-card__head">
+              <span class="expertise-card__icon" aria-hidden="true"><i class="bx bx-network-chart"></i></span>
+              <h3 class="expertise-card__title">How I work</h3>
+            </header>
+            <p class="mb-0 about-lead">
               I work across the stack, but my strongest value comes from connecting product thinking, architecture,
               engineering execution, and technical communication.
             </p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -293,45 +310,77 @@
           <h2>Current Role</h2>
           <p>Senior Software Developer — Angler Solutions · St. John’s, Newfoundland and Labrador, Canada</p>
         </div>
-        <div class="row">
-          <div class="col-lg-10 mx-auto" data-aos="fade-up">
-            <div class="resume-item pb-0">
-              <p>
-                At Angler Solutions, I work on MESO, a software platform built to support techno-economic analysis and
-                optimization of hybrid energy systems. My role extends beyond coding alone and includes system design,
-                solution planning, cloud architecture decisions, workflow improvements, and collaboration across
-                technical and business needs.
-              </p>
-              <p class="mb-2"><strong>My recent focus areas include:</strong></p>
-              <ul>
-                <li>Supporting the evolution of MESO into a more scalable and dynamic cloud-based platform</li>
-                <li>Designing and improving simulation workflows for energy models</li>
-                <li>Working on GIS-driven features for land analysis, site suitability, and geospatial decision support</li>
-                <li>Contributing to serverless architecture and AWS-based modernization efforts, with deployment strategy
-                  shaped by Terraform (IaC) for consistent provisioning and safer rollouts</li>
-                <li>Engaging with AWS, AWS partners, and local partners to align cloud roadmap, credits, and ecosystem opportunities</li>
-                <li>Contributing to software and system design documentation and workflows that support IP and patent filings</li>
-                <li>Supporting funding tracks with clear technical architecture, milestones, and partner-ready descriptions</li>
-                <li>Strengthening deployment, QA, release, and change-management practices</li>
-                <li>
-                  Helping shape technical direction for future capabilities such as reporting, scenario comparison, and
-                  intelligent decision support
-                </li>
-              </ul>
-            </div>
-            <h3 class="subsection-title mt-5">What sets me apart</h3>
+        <div class="cr-grid">
+          <article class="cr-card" data-aos="fade-up">
+            <header class="expertise-card__head">
+              <span class="expertise-card__icon" aria-hidden="true"><i class="bx bx-building"></i></span>
+              <h3 class="expertise-card__title">MESO at Angler Solutions</h3>
+            </header>
             <p>
-              I bring a combination of strengths that is not very common in one profile: software engineering depth
-              across frontend, backend, cloud, and system design; domain adaptability in energy, modelling, geospatial
-              systems, and applied analytics; architecture thinking that balances scalability, cost, maintainability,
-              and delivery speed; product-oriented execution with attention to usability, workflows, and stakeholder
-              needs; and clear communication with both technical teams and non-technical decision-makers.
+              At Angler Solutions, I work on MESO, a software platform built to support techno-economic analysis and
+              optimization of hybrid energy systems. My role extends beyond coding alone and includes system design,
+              solution planning, cloud architecture decisions, workflow improvements, and collaboration across
+              technical and business needs.
             </p>
-            <p class="mb-0">
-              I am especially effective in roles where a product needs someone who can understand the technical details,
-              structure the solution well, and help move it toward a stronger, more mature platform.
+            <p class="mb-2"><strong>My recent focus areas include:</strong></p>
+            <ul class="expertise-card__list">
+              <li>Supporting the evolution of MESO into a more scalable and dynamic cloud-based platform</li>
+              <li>Designing and improving simulation workflows for energy models</li>
+              <li>Working on GIS-driven features for land analysis, site suitability, and geospatial decision support</li>
+              <li>Contributing to serverless architecture and AWS-based modernization efforts, with deployment strategy
+                shaped by Terraform (IaC) for consistent provisioning and safer rollouts</li>
+              <li>Engaging with AWS, AWS partners, and local partners to align cloud roadmap, credits, and ecosystem opportunities</li>
+              <li>Contributing to software and system design documentation and workflows that support IP and patent filings</li>
+              <li>Supporting funding tracks with clear technical architecture, milestones, and partner-ready descriptions</li>
+              <li>Strengthening deployment, QA, release, and change-management practices</li>
+              <li>
+                Helping shape technical direction for future capabilities such as reporting, scenario comparison, and
+                intelligent decision support
+              </li>
+            </ul>
+          </article>
+          <article class="cr-card" data-aos="fade-up" data-aos-delay="100">
+            <header class="expertise-card__head">
+              <span class="expertise-card__icon" aria-hidden="true"><i class="bx bx-star"></i></span>
+              <h3 class="expertise-card__title">What sets me apart</h3>
+            </header>
+            <p class="cr-apart-lead">
+              I bring together capabilities that often sit in separate people—so there are fewer handoffs, faster
+              alignment from idea to implementation, and one person who can follow a thread from architecture through
+              delivery and stakeholder communication.
             </p>
-          </div>
+            <ul class="cr-apart-pillars">
+              <li>
+                <span class="cr-apart-pillars__title">Engineering breadth</span>
+                <span class="cr-apart-pillars__text">Hands-on depth across frontend, backend, cloud, and system design—not
+                  only one layer of the stack.</span>
+              </li>
+              <li>
+                <span class="cr-apart-pillars__title">Domain fit</span>
+                <span class="cr-apart-pillars__text">Energy systems, modelling workflows, GIS, and applied analytics—so
+                  technical requirements turn into software that matches how the domain actually works.</span>
+              </li>
+              <li>
+                <span class="cr-apart-pillars__title">Architecture judgment</span>
+                <span class="cr-apart-pillars__text">Clear trade-offs among scalability, cost, maintainability, and speed,
+                  documented so teams can build on decisions instead of re-litigating them.</span>
+              </li>
+              <li>
+                <span class="cr-apart-pillars__title">Product-oriented execution</span>
+                <span class="cr-apart-pillars__text">Usability, workflows, and release discipline—not just “it runs,” but
+                  “people can rely on it day to day.”</span>
+              </li>
+              <li>
+                <span class="cr-apart-pillars__title">Communication</span>
+                <span class="cr-apart-pillars__text">Direct, precise dialogue with engineers, modellers, and
+                  non-technical stakeholders—briefings, docs, and demos that match the audience.</span>
+              </li>
+            </ul>
+            <p class="cr-apart-closing mb-0">
+              I am especially effective where a product needs someone who can hold the technical detail, shape a coherent
+              solution, and help the platform grow into something more mature, observable, and easier to evolve.
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -421,26 +470,32 @@
     </section>
 
     <!-- ======= Core Expertise ======= -->
-    <section id="expertise" class="about">
+    <section id="expertise" class="about expertise-section">
       <div class="container">
         <div class="section-title">
           <h2>Core Expertise</h2>
           <p>Where I bring the most depth day to day.</p>
         </div>
-        <div class="row">
-          <div class="col-lg-6 mb-4" data-aos="fade-up">
-            <h4 class="subsection-title">Software engineering</h4>
-            <ul class="mb-0">
+        <div class="expertise-grid">
+          <article class="expertise-card" data-aos="fade-up">
+            <header class="expertise-card__head">
+              <span class="expertise-card__icon" aria-hidden="true"><i class="bx bx-code-alt"></i></span>
+              <h3 class="expertise-card__title">Software engineering</h3>
+            </header>
+            <ul class="expertise-card__list">
               <li>Full-stack application development</li>
               <li>Frontend and backend architecture</li>
               <li>API design and integration</li>
               <li>Scalable system design</li>
               <li>Feature planning and technical implementation</li>
             </ul>
-          </div>
-          <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-            <h4 class="subsection-title">Cloud &amp; DevOps</h4>
-            <ul class="mb-0">
+          </article>
+          <article class="expertise-card" data-aos="fade-up" data-aos-delay="80">
+            <header class="expertise-card__head">
+              <span class="expertise-card__icon" aria-hidden="true"><i class="bx bx-cloud"></i></span>
+              <h3 class="expertise-card__title">Cloud &amp; DevOps</h3>
+            </header>
+            <ul class="expertise-card__list">
               <li>AWS architecture</li>
               <li>Serverless systems</li>
               <li>Lambda, API Gateway, S3, DynamoDB, RDS</li>
@@ -449,44 +504,47 @@
               <li>Deployment strategy and environment management</li>
               <li>Cloud cost and operational thinking</li>
             </ul>
-          </div>
-          <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-            <h4 class="subsection-title">Geospatial &amp; technical platforms</h4>
-            <ul class="mb-0">
+          </article>
+          <article class="expertise-card" data-aos="fade-up" data-aos-delay="160">
+            <header class="expertise-card__head">
+              <span class="expertise-card__icon" aria-hidden="true"><i class="bx bx-map"></i></span>
+              <h3 class="expertise-card__title">Geospatial &amp; technical platforms</h3>
+            </header>
+            <ul class="expertise-card__list">
               <li>GIS-enabled software features</li>
               <li>Spatial analysis workflows</li>
               <li>Map-based product interfaces</li>
               <li>Constraint-based land analysis</li>
               <li>Data-driven technical decision support</li>
             </ul>
-          </div>
-          <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-            <h4 class="subsection-title">Product &amp; delivery</h4>
-            <ul class="mb-0">
+          </article>
+          <article class="expertise-card" data-aos="fade-up" data-aos-delay="100">
+            <header class="expertise-card__head">
+              <span class="expertise-card__icon" aria-hidden="true"><i class="bx bx-git-compare"></i></span>
+              <h3 class="expertise-card__title">Product &amp; delivery</h3>
+            </header>
+            <ul class="expertise-card__list">
               <li>Technical planning</li>
               <li>Agile collaboration</li>
               <li>Release/change management thinking</li>
               <li>Cross-functional communication</li>
               <li>Documentation and technical storytelling</li>
             </ul>
-          </div>
-          <div class="col-lg-12 mb-4" data-aos="fade-up" data-aos-delay="400">
-            <h4 class="subsection-title">IP, funding &amp; partnerships</h4>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul class="mb-0">
-                  <li>Software and system design in support of patenting and technical disclosure</li>
-                  <li>Funding-oriented technical narratives, scoping, and milestone thinking</li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul class="mb-0">
-                  <li>AWS and AWS partner program alignment (architecture, modernization, ecosystem)</li>
-                  <li>Local partner and regional collaboration for delivery and programs</li>
-                </ul>
-              </div>
+          </article>
+          <article class="expertise-card expertise-card--wide" data-aos="fade-up" data-aos-delay="200">
+            <header class="expertise-card__head">
+              <span class="expertise-card__icon" aria-hidden="true"><i class="bx bx-briefcase"></i></span>
+              <h3 class="expertise-card__title">IP, funding &amp; partnerships</h3>
+            </header>
+            <div class="expertise-card__wide-body">
+              <ul class="expertise-card__list">
+                <li>Software and system design in support of patenting and technical disclosure</li>
+                <li>Funding-oriented technical narratives, scoping, and milestone thinking</li>
+                <li>AWS and AWS partner program alignment (architecture, modernization, ecosystem)</li>
+                <li>Local partner and regional collaboration for delivery and programs</li>
+              </ul>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -1222,8 +1280,8 @@
     </div>
   </footer>
   <!--End  Footer-->
-  <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-    class="bi bi-arrow-up-short"></i></a> -->
+  <a href="#hero" class="back-to-top d-flex align-items-center justify-content-center scrollto"
+    aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>

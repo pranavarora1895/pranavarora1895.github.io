@@ -37,14 +37,15 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 996;
+  right: 20px;
+  bottom: 24px;
+  z-index: 99999;
   background: #149ddd;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50px;
   transition: all 0.4s;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }
 
 .back-to-top i {
@@ -1148,8 +1149,307 @@ section {
   margin-bottom: 1rem;
 }
 
-.current-role .resume-item ul {
-  padding-left: 1.1rem;
+/*--------------------------------------------------------------
+# Core Expertise (card grid)
+--------------------------------------------------------------*/
+.expertise-section .expertise-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+.expertise-card,
+.about-section .about-card,
+.what-section .wi-card,
+.current-role .cr-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.35rem 1.4rem 1.45rem;
+  border: 1px solid rgba(20, 157, 221, 0.14);
+  box-shadow: 0 4px 18px rgba(23, 59, 108, 0.06);
+  height: 100%;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.expertise-card:hover,
+.about-section .about-card:hover,
+.what-section .wi-card:hover,
+.current-role .cr-card:hover {
+  border-color: rgba(20, 157, 221, 0.32);
+  box-shadow: 0 8px 28px rgba(23, 59, 108, 0.1);
+}
+
+.expertise-card__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-bottom: 0.95rem;
+}
+
+.expertise-card__icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #dff3fc 0%, #eef8fc 100%);
+  color: #149ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.expertise-card__title {
+  font-family: "Raleway", system-ui, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #173b6c;
+  margin: 0;
+  line-height: 1.35;
+  padding-top: 0.2rem;
+}
+
+.expertise-card__list {
+  margin: 0;
+  padding-left: 1.15rem;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #3d4450;
+}
+
+.expertise-card__list li {
+  margin-bottom: 0.45rem;
+}
+
+.expertise-card__list li:last-child {
+  margin-bottom: 0;
+}
+
+.expertise-card__wide-body .expertise-card__list {
+  margin: 0;
+}
+
+@media (min-width: 576px) {
+  .expertise-card__wide-body .expertise-card__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.35rem 1.75rem;
+    padding-left: 1.15rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .expertise-section .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .expertise-card--wide {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 992px) {
+  .expertise-section .expertise-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .expertise-card--wide {
+    grid-column: span 2;
+  }
+}
+
+/*--------------------------------------------------------------
+# About / What I Do / Current Role (card grids)
+--------------------------------------------------------------*/
+.about-section .about-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+.about-section .about-card--photo {
+  align-self: start;
+  padding: 0.85rem;
+}
+
+.about-card__photo-wrap {
+  border-radius: 8px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.about-card__photo-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-lead {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #3d4450;
+}
+
+.about-facts {
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 576px) {
+  .about-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.about-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.55rem 0.7rem;
+  background: #f5f8fd;
+  border-radius: 8px;
+  border: 1px solid rgba(20, 157, 221, 0.12);
+}
+
+.about-fact__label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #149ddd;
+}
+
+.about-fact__value {
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: #2c4964;
+}
+
+.about-card__body p,
+.about-card--prose > p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #3d4450;
+}
+
+.about-card__body p:last-child,
+.about-card--prose > p:last-child {
+  margin-bottom: 0;
+}
+
+.about-section .about-card--wide {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 992px) {
+  .about-section .about-grid {
+    grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .about-section .about-card--photo {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .about-section .about-card--intro {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+.what-section .wi-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .what-section .wi-grid {
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.current-role .cr-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 992px) {
+  .current-role .cr-grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.current-role .cr-card p,
+.current-role .cr-card .expertise-card__list {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #3d4450;
+}
+
+.current-role .cr-card p strong {
+  color: #173b6c;
+}
+
+.current-role .cr-apart-lead,
+.current-role .cr-apart-closing {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #3d4450;
+}
+
+.current-role .cr-apart-lead {
+  margin-bottom: 1.1rem;
+}
+
+.current-role .cr-apart-pillars {
+  list-style: none;
+  margin: 0 0 1.15rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.current-role .cr-apart-pillars > li {
+  margin: 0;
+  padding: 0.65rem 0.8rem 0.7rem 0.85rem;
+  background: linear-gradient(90deg, rgba(20, 157, 221, 0.08) 0%, #f5f8fd 12%, #f5f8fd 100%);
+  border-radius: 8px;
+  border: 1px solid rgba(20, 157, 221, 0.14);
+  border-left: 3px solid #149ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.current-role .cr-apart-pillars__title {
+  display: block;
+  font-family: "Raleway", system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #173b6c;
+}
+
+.current-role .cr-apart-pillars__text {
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #3d4450;
+}
+
+.current-role .cr-apart-closing {
+  padding-top: 0.15rem;
+  border-top: 1px solid rgba(20, 157, 221, 0.15);
 }
 
 .booking-widget-wrap {
