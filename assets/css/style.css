@@ -9,8 +9,10 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   color: #272829;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 a {
@@ -24,7 +26,8 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", system-ui, -apple-system, sans-serif;
+  line-height: 1.25;
 }
 
 /*--------------------------------------------------------------
@@ -91,7 +94,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   -moz-text-align-last: center;
   text-align-last: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", system-ui, sans-serif;
 }
 
 #header .profile h1 a, #header .profile h1 a:hover {
@@ -212,7 +215,9 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
+  padding: 100px 24px 72px;
   background: url("../img/pranav_bg.JPG") top center;
   background-size: cover;
 }
@@ -236,17 +241,47 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 64px;
+  font-size: clamp(1.75rem, 4vw + 1rem, 4rem);
   font-weight: 700;
-  line-height: 56px;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
   color: #fff;
 }
 
 #hero p {
   color: #fff;
-  margin-bottom: 50px;
+}
+
+#hero p.hero-typed-line {
+  margin-bottom: 1.25rem;
   font-size: 26px;
-  font-family: "Poppins", sans-serif;
+}
+
+#hero .hero-tagline {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 1rem;
+  max-width: 52rem;
+  line-height: 1.45;
+}
+
+#hero .hero-lead {
+  font-size: 1rem;
+  font-weight: 400;
+  max-width: 46rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.65;
+}
+
+#hero .hero-cta .btn {
+  margin: 0.35rem 0.35rem 0.35rem 0;
+}
+
+#hero .hero-cta .btn-outline-light:hover {
+  color: #040b14;
+  background: #fff;
+  border-color: #fff;
 }
 
 #hero p span {
@@ -263,10 +298,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
-  #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
@@ -291,7 +322,7 @@ section {
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: clamp(1.5rem, 1.2vw + 1.2rem, 2rem);
   font-weight: bold;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -392,7 +423,7 @@ section {
   margin-top: 20px;
   color: #122f57;
   font-size: 15px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", system-ui, sans-serif;
   transition: ease-in-out 0.3s;
 }
 
@@ -416,7 +447,7 @@ section {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", system-ui, sans-serif;
   color: #050d18;
 }
 
@@ -456,11 +487,11 @@ section {
 }
 
 .resume .resume-item h4 {
-  line-height: 18px;
+  line-height: 1.3;
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", system-ui, sans-serif;
   color: #050d18;
   margin-bottom: 10px;
 }
@@ -738,6 +769,12 @@ section {
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
+/* Same soft gradient as Contact / Experience (section-bg tones) */
+#resume.section-bg,
+#testimonials.testimonials {
+  background: linear-gradient(180deg, #f5f8fd 0%, #eef3f9 100%);
+}
+
 .testimonials .testimonial-item {
   box-sizing: content-box;
   text-align: center;
@@ -1053,6 +1090,226 @@ section {
   }
   .breadcrumbs ol li {
     display: inline-block;
+  }
+}
+
+/*--------------------------------------------------------------
+# Site custom (senior positioning)
+--------------------------------------------------------------*/
+.skill-group h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #173b6c;
+  margin-bottom: 0.75rem;
+}
+
+.skill-group p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+.featured-card {
+  background: #fff;
+  border-radius: 6px;
+  padding: 1.5rem;
+  height: 100%;
+  box-shadow: 0 0 20px rgba(23, 59, 108, 0.06);
+  border: 1px solid rgba(20, 157, 221, 0.12);
+}
+
+.featured-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #173b6c;
+  margin-bottom: 0.75rem;
+}
+
+.featured-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.featured-card .featured-card-actions {
+  margin-top: 1rem;
+}
+
+.subsection-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #173b6c;
+  margin-bottom: 1rem;
+}
+
+.current-role .resume-item ul {
+  padding-left: 1.1rem;
+}
+
+.booking-widget-wrap {
+  background: #f5f8fd;
+  border-color: rgba(20, 157, 221, 0.25) !important;
+}
+
+/*--------------------------------------------------------------
+# Contact (refined layout)
+--------------------------------------------------------------*/
+#contact.contact-section {
+  background: linear-gradient(180deg, #f5f8fd 0%, #eef3f9 100%);
+}
+
+#contact .contact-aside-lead {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #2c4964;
+}
+
+#contact .contact-link-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  margin-bottom: 0.75rem;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid rgba(20, 157, 221, 0.18);
+  box-shadow: 0 4px 18px rgba(23, 59, 108, 0.06);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+  position: relative;
+}
+
+#contact .contact-link-card:last-of-type {
+  margin-bottom: 0;
+}
+
+#contact .contact-link-card:hover {
+  border-color: rgba(20, 157, 221, 0.45);
+  box-shadow: 0 10px 32px rgba(23, 59, 108, 0.12);
+  transform: translateY(-2px);
+  color: inherit;
+}
+
+#contact .contact-link-card__icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #dff3fc;
+  color: #149ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+#contact .contact-link-card:hover .contact-link-card__icon {
+  background: #149ddd;
+  color: #fff;
+}
+
+#contact .contact-link-card__body {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+
+#contact .contact-link-card__label {
+  display: block;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #72879e;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+#contact .contact-link-card__value {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #173b6c;
+  word-break: break-word;
+}
+
+#contact .contact-link-card__arrow {
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  color: #b8c5d6;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+#contact .contact-link-card:hover .contact-link-card__arrow {
+  color: #149ddd;
+  transform: translate(2px, -2px);
+}
+
+#contact .contact-social-pill {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+
+#contact .contact-social-pill__label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: #72879e;
+}
+
+#contact .contact-social-pill__links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#contact .contact-social-pill__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #fff;
+  color: #173b6c;
+  border: 1px solid rgba(20, 157, 221, 0.2);
+  font-size: 1.2rem;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+#contact .contact-social-pill__btn:hover {
+  background: #149ddd;
+  color: #fff;
+  border-color: #149ddd;
+  transform: translateY(-2px);
+}
+
+#contact .contact-form-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(20, 157, 221, 0.14);
+  box-shadow: 0 12px 40px rgba(23, 59, 108, 0.1);
+  padding: 1.75rem 1.75rem 2rem;
+  height: 100%;
+}
+
+#contact .contact-form-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #173b6c;
+  margin-bottom: 0.35rem;
+}
+
+#contact .contact-form-embed {
+  min-height: 120px;
+}
+
+@media (max-width: 991px) {
+  #contact .contact-form-card {
+    margin-top: 0.5rem;
   }
 }
 
