@@ -1443,6 +1443,21 @@ ul.skill-tags li.skill-tag {
   margin-top: 1rem;
 }
 
+.featured-card .featured-card-thumb {
+  max-width: min(100%, 360px);
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(20, 157, 221, 0.15);
+  box-shadow: 0 4px 14px rgba(23, 59, 108, 0.08);
+  line-height: 0;
+}
+
+.featured-card .featured-card-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .subsection-title {
   font-size: 1.35rem;
   font-weight: 700;
