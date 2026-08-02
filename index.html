@@ -479,25 +479,22 @@
         <div class="row g-4">
           <div class="col-lg-12" data-aos="fade-up">
             <div class="featured-card">
-              <h4><span class="badge bg-primary me-2 align-middle">High impact</span>MERLIN — Probabilistic Reservoir
-                Forecasting</h4>
-              <p class="mb-2">Built and deployed MERLIN (MESO Ensemble Reservoir Level Intelligence Network) end to
-                end—a 14-day probabilistic lake-level forecasting system for a hydroelectric utility in Newfoundland.
-                It replaced a static spreadsheet heuristic with a weather-driven, dispatch-conditioned deep-learning
-                forecast that answers the real operational question: given a planned generation schedule over the next two
-                weeks, what's the P10/P50/P90 trajectory of the reservoir level?</p>
+              <h4><span class="badge bg-primary me-2 align-middle">High impact</span>Probabilistic time-series
+                forecasting</h4>
+              <p class="mb-2">Designed and productionized an end-to-end probabilistic forecasting system for
+                operational planning in the energy domain—moving from static heuristics to a weather-informed,
+                schedule-aware deep-learning forecast with uncertainty bands stakeholders can act on.</p>
               <p class="mb-2"><strong>This involved:</strong></p>
               <ul class="impact-detail-list mb-2">
-                <li>Designed an LSTM with quantile-regression heads (pinball loss at the 10th/50th/90th percentiles) and
-                  a dispatch-conditioned decoder—predicting change in level rather than absolute level to break an
-                  autocorrelation shortcut and sharpen skill</li>
-                <li>Engineered a pipeline fusing a 31-member NOAA weather ensemble, ERA5-Land reanalysis, real-time gauge
-                  telemetry, and historical streamflow into one training and inference flow</li>
-                <li>Established persistence and climatology baselines up front; ~28% RMSE improvement over persistence on
-                  held-out data, with P10–P90 coverage near nominal—all metrics strictly out-of-sample</li>
-                <li>Productionized on AWS: scheduled ECS Fargate tasks via EventBridge, forecast artifacts to S3, failure
-                  alerting via SNS, secrets in Secrets Manager, infrastructure as code with Terraform</li>
-                <li>Shipped a lightweight API and a Vue/ECharts frontend for stakeholder-facing forecast visualization</li>
+                <li>Built deep-learning models with quantile outputs so forecasts communicate a range of likely
+                  outcomes, not a single point estimate</li>
+                <li>Engineered training and inference pipelines that fuse multi-source weather ensembles, reanalysis
+                  data, and operational telemetry into one reproducible flow</li>
+                <li>Set clear baselines early and evaluated skill strictly out-of-sample so improvements were
+                  measurable and trustworthy</li>
+                <li>Productionized on AWS with scheduled compute, artifact storage, alerting, secrets management, and
+                  infrastructure as code (Terraform)</li>
+                <li>Shipped a lightweight API and interactive frontend for stakeholder-facing forecast visualization</li>
               </ul>
             </div>
           </div>
